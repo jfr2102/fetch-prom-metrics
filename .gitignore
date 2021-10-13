@@ -1,3 +1,4 @@
 *.csv
 myquerylist.py
+myconfig.py
 __pycache__

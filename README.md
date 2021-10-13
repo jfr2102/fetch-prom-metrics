@@ -2,13 +2,13 @@
 
 Fetch List of Prometheus Metrics into pandas df and save as csv.
 ### usage
-- Include List of Tuples of format ("QUERYNAME", "PROM_QUERY") in querylist.py
+- Include List of Tuples of format ("QUERYNAME", "PROM_QUERY") in [querylist.py](querylist.py):
 ```python
 queries = [("QUERYNAME", "PROM_QUERY"),
            ("QUERYNAME", "PROM_QUERY")
 ]
 ```
-- configure resolutiom, start + end time and url in fetch.py:
+- configure resolutiom, start + end time and url in [config.py](config.py):
 ```python
 resolution  = "10s"
 start_time  = (dt.utcnow() - timedelta(minutes=5))
