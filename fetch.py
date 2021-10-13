@@ -5,12 +5,13 @@ from datetime import timedelta
 import os
 from matplotlib import pyplot
 
+# List of queries to fetch
+#from querylist import *
+from myquerylist import *
+
 now = dt.now()
 path= (now.strftime("%Y-%m-%d-%H_%M"))
 os.mkdir(path)
-
-queries = [("storm_topology_Parser_Executed_count" ,"storm_topology_Parser_Executed_count{component_id=\"bolt\", exported_instance=\"3c04ef351e4c\", exported_job=\"storm\", host_name=\"3c04ef351e4c\", instance=\"pushgateway:9091\", job=\"pushgateway\", task_id=\"11\", topology_id=\"CheckTopology-2-1634124643\", worker_port=\"6703\"}" )
-]
 
 resolution  = "10s"
 start_time  = (dt.utcnow() - timedelta(minutes=5))
