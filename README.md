@@ -1,6 +1,14 @@
 # fetch-prom-metrics
 
-Fetch List of Prometheus Metrics into pandas df and save as csv.
+Fetch List of Prometheus Metrics into and save as csv with help of: [parides](https://github.com/goettl79/parides)
+
+### prerequisites:
+
+Install [parides](https://github.com/goettl79/parides)
+```bash
+pip install parides
+```
+
 ### usage
 - Include List of Tuples of format ("QUERYNAME", "PROM_QUERY") in [querylist.py](querylist.py):
 ```python
