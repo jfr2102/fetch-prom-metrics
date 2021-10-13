@@ -1,5 +1,4 @@
 from parides.prom_conv import from_prom_to_df
-from parides.prom_conv import from_prom_to_csv
 from datetime import datetime as dt, datetime
 from datetime import timedelta
 import os
@@ -12,10 +11,14 @@ from querylist import *
 # Config
 from config import *
 #from myconfig import *
-
+try:
+    os.mkdir("prom-metrics")
+    print("created prom-metrics directory")
+except FileExistsError:
+    print("prom-metrics directory already exists")
 now = dt.now()
-path= (now.strftime("%Y-%m-%d-%H_%M"))
-os.mkdir(path)
+path = (now.strftime("%Y-%m-%d-%H_%M"))
+os.mkdir("prom-metrics/"+path)
 
 for q in queries:
     df = from_prom_to_df(
@@ -25,4 +28,4 @@ for q in queries:
         url           = url,
         metrics_query = q[1]
     )
-    df.to_csv(path + '/' + q[0] + '.csv')
+    df.to_csv("prom-metrics/" + path + '/' + q[0] + '.csv')
