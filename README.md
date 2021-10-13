@@ -22,6 +22,6 @@ resolution  = "10s"
 start_time  = (dt.utcnow() - timedelta(minutes=5))
 end_time    = dt.utcnow()
 url         = "http://PROM_HOST:9090"
-
-All queries are executed and results stored in prom-metrics/*EXECUTIONTIME*/*QUERYNAME*.csv
 ```
+- run e.g. ```bash python3 fetch.py``` 
+-> All queries are executed and results stored in prom-metrics/*EXECUTIONTIME*/*QUERYNAME*.csv
