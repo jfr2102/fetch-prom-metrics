@@ -6,12 +6,12 @@ import sys
 from matplotlib import pyplot
 
 # List of queries to fetch
-#from querylist import *
-from myquerylist import *
+from querylist import *
+#from myquerylist import *
 
 # Config
-#from config import *
-from myconfig import *
+from config import *
+#from myconfig import *
 try:
     os.mkdir("prom-metrics")
     print("created prom-metrics directory")
